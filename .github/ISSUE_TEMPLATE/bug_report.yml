@@ -1,0 +1,48 @@
+name: Bug report
+description: Report unexpected behaviour in a Syloqen project.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a problem. Please remove or redact all secrets,
+        state data, account identifiers, and private endpoints.
+  - type: input
+    id: project-version
+    attributes:
+      label: Project and version
+      description: Which Syloqen project and release or commit are affected?
+      placeholder: terraform-aws-backend-bootstrap v0.1.0
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Include relevant Terraform, provider, and operating-system versions.
+      placeholder: Terraform 1.x, AWS provider 5.x, macOS 15
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+      description: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behaviour
+      description: What happened instead? Include redacted errors or logs if useful.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Provide the smallest reproducible configuration or sequence of steps.
+    validations:
+      required: true
